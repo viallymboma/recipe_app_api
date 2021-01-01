@@ -20,7 +20,6 @@ class ModelTest(TestCase):
         self.assertEqual(user.email, email)
         self.assertTrue(user.check_password(password))
 
-
     def test_new_user_email_normalize(self):
         """
         docstring
@@ -33,7 +32,6 @@ class ModelTest(TestCase):
 
         self.assertEqual(user.email, email.lower())
 
-
     def test_new_user_invalid_email(self):
         """
         docstring
@@ -43,7 +41,6 @@ class ModelTest(TestCase):
                 None,
                 'test123'
             )
-
 
     def test_create_new_superuser(self):
         user = get_user_model().object.create_superuser(
